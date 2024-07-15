@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contacto.css">
+    <script defer src="https://kit.fontawesome.com/009a30f721.js" crossorigin="anonymous"></script>
+    <script defer src="contacto.js"></script>
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Más allá de tu cuerpo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="../index.html"><img class="logo" src="https://64.media.tumblr.com/42058e29112153f31b99c5589f5aab4f/139dba509762f851-ba/s540x810/c01a308ba01d8d41050f66b76801c7290b809b38.pnj" alt="logo"></a>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" href="/index.html">Principal</a></li>
+                <li><a href="../INDEX US/indexUS.html">Sobre mi</a></li>
+                <li><a href="/servicios/servicios.html">Servicios</a></li>
+                <li><a href="../portafolio/portafolio.html">Portafolio</a></li>
+                <!-- <li><a href="#">Transformaciones</a></li> -->
+                <li><a href="#" id="CurrentPage">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form id="form">
+                <h3>CONTACTO</h3>
+                <input name="name" type="text" id="name" placeholder="Tu nombre" required>
+                <input name="email" type="email" id="email" placeholder="Tu email" required>
+                <textarea name="message" id="Message" rows="4" placeholder="Deja tu mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <a href="mailto:ma.detucuerpo@gmail.com" id="trucazo">mail</a>
+        </div>
+</main>
+<!--Boton de ir hacia arriba-->
+<div class="button-up" id="button-up">
+    <i class="fas fa-chevron-up"></i>
+</div>
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#"> <img src="https://64.media.tumblr.com/e6100d49a56d563326999131661113a7/b6d933701778f58d-54/s540x810/86208dc3229aba16208e8721f2330ff91cd50e82.pnj" width="170px" alt="logo"></a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>NO ESPERES MÁS</h2>
+            <p>Toma acción de una vez y cambia tu futuro, tu mente y espíritu.</p>
+            <p>Te garantizamos que serás una persona imparable.</p>
+        </div>
+        <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+                <a href="#" target="_blank"><img src="/img/Instagram-Logo.png" alt="Instagram" height="25"></a>
+                <a href="#" target="_blank"><img src="/img/Facebook-PNG-Clipart.png" alt="Facebook" height="25"></a>
+                <a href="#" target="_blank"><img src="/img/Youtube-Logo-Transparent-Images-PNG.png" alt="Youtube" height="25"></a>
+                <a href="#" target="_blank"><img src="/img/telegram-logo-png-telegram-app-icon-png-50-px-1600.png" alt="Telegram" height="25"></a>
+                <a href="#" target="_blank"><img src="/img/tiktok.png" alt="TikTok" height="25"></a>
+            </div>
+        </div>
+    </div>
+    <div class="grupo-2">
+        <small>&copy; 2023 <b>Más allá de tu cuerpo</b> - Todos los derechos reservados. </small>
+    </div>
+</footer>
+<script>
+   const $form = document.querySelector('#form');
+   const $buttonMailto = document.querySelector('#trucazo');
+
+   $form.addEventListener('submit', handleSubmit)
+
+   function handleSubmit(event) {
+    event.preventDefault();
+    const form = new FormData(this);
+    console.log(form.get('name'));
+    $buttonMailto.setAttribute('href', `mailto:ma.detucuerpo@gmail.com?subject=Nombre: ${form.get('name')}   Correo: ${form.get('email')}&body=${form.get('message')}`);
+    $buttonMailto.click();
+   }
+</script>
+</body>
+</html>

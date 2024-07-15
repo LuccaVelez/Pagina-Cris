@@ -1,0 +1,343 @@
+/*GOOGLE FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+/* CSS RESET */
+
+.nav-menu #CurrentPage {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.nav-menu #CurrentPage:hover {
+    background-color: white;
+    color: red;
+   
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    height: 11vh;
+    border-bottom: solid 3px red;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* NAVIGATION */
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    width: 170px;
+    margin-left: 20px;
+
+}
+
+.bar-btn {
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0, 0, 0, .95);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {
+    color: red;
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+/* BANNER TEXT */
+
+/* RESPONSIVE FOR DESKTOP */
+
+@media screen and (min-width: 768px){
+    .logo {
+        margin-left: 50px;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        font-size: 17px;
+    }
+
+}
+
+/* NOSOTROS SECCIÓN UNO */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+main {
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.about-section {
+    align-items: center;
+    justify-content: center;
+    background: url(IMG/thommy.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: rgba(53, 2, 2);
+    overflow: hidden;
+    padding: 100px 0;
+    cursor: default;
+    box-shadow: 0px 5px 90px rgb(255, 0, 0, 0.6);
+    border-bottom: solid 3px red;
+    border-top: solid 3px red;
+}
+
+.inner-container {
+    width: 55%;
+    float: right;
+    background-color: black;
+    padding: 150px;
+    border-radius: 30px;
+    border: solid 3px red;
+}
+
+.inner-container h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #ffff;
+
+}
+
+.text {
+    font-size: 16px;
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #ffff;
+    
+}
+
+@media screen and (max-width:1200px) {
+    .inner-container {
+        padding: 80px;
+
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-section{
+        padding: 0;
+
+    }
+    .inner-container {
+        padding: 60px;
+    }
+}
+
+.finalButton {
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: solid 3px red;
+}
+
+.finalButton a {
+    color: red;
+    transition: all 0.5s ease;
+}
+
+.finalButton a:hover {
+    color: white;
+}
+
+.finalButton a img {
+    width: 40px;
+    height: 40px;
+}
+
+/* FOOTER */
+
+.pie-pagina {
+    width: 100%;
+    background-color: #5a0909;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pie-pagina.grupo-1.box figure img {
+    width: 250px;
+
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #ffff;
+    margin-bottom: 25px;
+    font-size: 20px;
+    
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 57px;
+    margin-right: 10px;
+    transition: all 300ms ease;
+    text-align: center;
+    clip-path: circle(60% at center);
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    background-color: #3d0808;
+    clip-path: circle(60% at center);
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #3d0808;
+    padding: 15px 10px;
+    color: #ffff;
+    text-align: center;
+
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px){
+
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    
+    }
+
+}

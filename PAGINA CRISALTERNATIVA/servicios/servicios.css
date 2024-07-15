@@ -1,0 +1,474 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 60vh;
+    background-image: url(/servicios/serviciosIMG/serviciosheader.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* NAVIGATION */
+
+.nav-menu #CurrentPage {
+    color: white; 
+    background-color: red; 
+    padding: 10px;
+    transition: all 500ms ease;
+}
+
+.nav-menu #CurrentPage:hover {
+    background-color: white;
+    color: red;
+    
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    width: 90px;
+    margin-left: 20px;
+
+}
+
+.bar-btn {
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0, 0, 0, .95);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {
+    color: red;
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+/* RESPONSIVE FOR DESKTOP */
+
+@media screen and (min-width: 768px){
+    .logo {
+        margin-left: 50px;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        font-size: 17px;
+    }
+
+}
+
+/* CARDS */
+
+.Planes {
+  overflow: hidden;
+  color: #ffff;
+  font-size: 50px;
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  line-height: 90px;
+  font-weight: bold;
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: animacion 8s linear infinite;
+  animation: animacion 8s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes animacion {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+@keyframes animacion {
+  from {
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    max-width: 1450px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0px 1px 10px rgb(255, 255, 255, 0.6);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgb(255, 255, 255, 0.8);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+    color: #ffff;
+}
+
+.card .contenido h3 {
+    margin-bottom: 10px;
+}
+
+.card .contenido p {
+    line-height: 1.5;
+}
+
+.card .contenido a {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: all 400ms ease;
+}
+
+.card .contenido a:hover {
+    color: red;
+    background-color: white;
+}
+
+/* BUTTON UP */
+
+#button-up {
+    transform: scale(0);
+}
+
+
+.button-up {
+    width: 60px;
+    height: 60px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 300ms ease;
+}
+
+.button-up:hover {
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, 0.1);
+
+}
+
+/* FOOTER */
+
+.pie-pagina {
+    width: 100%;
+    background-color: #5a0909;
+    margin-top: 50px;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pie-pagina.grupo-1.box figure img {
+    width: 250px;
+
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #ffff;
+    margin-bottom: 25px;
+    font-size: 20px;
+    
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 57px;
+    margin-right: 10px;
+    transition: all 300ms ease;
+    text-align: center;
+    clip-path: circle(60% at center);
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    background-color: #3d0808;
+    clip-path: circle(60% at center);
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #3d0808;
+    padding: 15px 10px;
+    color: #ffff;
+    text-align: center;
+
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width:646px){
+    .parrafo img, .parrafo1 img, .parrafo2 img, .parrafo3 img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:1128px){
+
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-width: 350px;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0 auto;
+        border-bottom: none;
+    }
+    
+    .card:hover {
+        transform: translateY(0%);
+    }
+
+    .parrafo {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/* INFO PRODUCTOS */
+
+.parrafo, .parrafo3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.parrafo {
+    width: 80%;
+    padding: 60px 60px;
+    font-size: 15px;
+    color: white;
+    line-height: 1.5;
+    background: black;
+    box-shadow: 1px 5px 25px rgb(255, 255, 255, 0.9);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.parrafo img {
+    border-radius: 5px;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.parrafo ul li {
+    line-height: 40px;
+    list-style-type: circle;
+    margin-left: 10px;
+}
+
+
+.parrafo3 {
+    width: 80%;
+    padding: 60px 60px;
+    font-size: 15px;
+    color: white;
+    line-height: 1.5;
+    background: black;
+    box-shadow: 1px 5px 25px rgb(255, 255, 255, 0.9);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.parrafo3 img {
+    border-radius: 5px;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.parrafo3 ul li {
+    line-height: 40px;
+    list-style-type: circle;
+    margin-left: 10px;
+}
+
+.finalButton {
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.finalButton a {
+    color: red;
+    transition: all 0.5s ease;
+}
+
+.finalButton a:hover {
+    color: white;
+}
+
+.finalButton a img {
+    width: 40px;
+    height: 40px;
+}
